@@ -12,11 +12,12 @@
 		padding: 2em;
 		margin: 0 auto;
 		box-sizing: border-box;
+		text-align: left;
 	}
 	@media screen and (min-width: 1200px) {
 		main {
 			width: 1200px;
-			
+
 		}
 	}
 </style>
