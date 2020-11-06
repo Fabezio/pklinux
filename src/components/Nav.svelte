@@ -1,5 +1,10 @@
 <script>
 	export let segment;
+	const links = [
+		{url:"advices", label: "conseils"},
+		{url:"distros", label: "distributions"},
+		{url:"thumbnails", label: "vignettes"},
+	]
 </script>
 
 <style>
@@ -51,9 +56,11 @@
 <nav>
 	<ul>
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">accueil</a></li>
-		<li><a aria-current="{segment === 'advices' ? 'page' : undefined}" href="advices">conseils</a></li>
-		<li><a aria-current="{segment === 'distros' ? 'page' : undefined}" href="distros">distributions</a></li>
-		<li><a aria-current="{segment === 'thumbnails' ? 'page' : undefined}" href="thumbnails">vignettes</a></li>
+		{#each links as link}
+		<li><a aria-current="{segment === link.url ? 'page' : undefined}" href={link.url}>{link.label}</a></li>
+		<!-- <li><a aria-current="{segment === 'distros' ? 'page' : undefined}" href="distros">distributions</a></li>
+		<li><a aria-current="{segment === 'thumbnails' ? 'page' : undefined}" href="thumbnails">vignettes</a></li> -->
+		{/each}
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->

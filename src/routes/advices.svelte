@@ -15,9 +15,17 @@
       </ul>
     </li>
     <li>Vient ensuite la personnalisation: le choix de votre identifiant, éventuellement le nom complet, le mot de passe (à confirmer). Généralement vous avez les droits d'administration par défaut (via la commande <em>sudo</em>), mais il est parfois nécessaire de le préciser si demandé (option <em>root</em>). Ce faisant vous pourrez absolument tout faire. Important: cette étape ne se fait sur certaines distributions qu'une fois l'installation terminée, l'ordinateur redémarré (ex: <em>Fedora</em>).</li>
-    <li>l'installation démarre</li>
-    <li>dernière étape: le gestionnaire de démarrage (parfois elle apparait avec le choix d'installation). Si vous avez plusieurs volumes ou systèmes d'exploitation, il sera demandé si vous voulez installer <em>Grub </em> (c'est le nom du gestionnaire); confirmez. S'il demande sur quel volume vous voulez le placer, ce sera celui qui héberge Linux.</li>
+    <li>L'installation démarre. Patientez quelques minutes.</li>
+    <li>Dernière étape: le gestionnaire de démarrage (parfois cette option apparait avec le choix d'installation). Si vous avez plusieurs volumes ou systèmes d'exploitation, il sera demandé si vous voulez installer <em>Grub </em> (c'est le nom du gestionnaire); confirmez. S'il demande sur quel volume vous voulez le placer, ce sera celui qui héberge Linux.</li>
     <li>Même chose pour le gestionnaire de paquet, répondez par l'affirmative, sinon vous ne pourrez rien installer. Concernant le depot miroir, si la question est posée, laissez tel quel (vous pourrez toujours le configurer plus tard)</li>
   </ol>
   <p>Voilà, vous avez installé Linux. Pas si dur, n'est-ce pas? En plus ça aura pris moins de quinze minutes. A présent redémarrez et profitez!</p>
 <!-- </h1> -->
+<style>
+  li, ul {
+    /* list-style: inside; */
+    position: relative;
+    right: 10px;
+
+  }
+</style>

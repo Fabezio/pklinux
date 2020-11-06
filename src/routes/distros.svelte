@@ -123,7 +123,7 @@
       <div class="frame"><img src={distro.logo} alt="logo" /></div>
 
       <div class="text">
-        < class="">distribution: {distro.name} / <b>Famille: {distro.family}</b><br>
+        <p class="">distribution: {distro.name} / <b>Famille: {distro.family}</b><br>
         {distro.desc}</p>
       </div>
     </div>
