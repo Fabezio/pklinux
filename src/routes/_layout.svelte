@@ -25,7 +25,7 @@
 
 <Nav {segment}/>
 
-<main class="container mt-5">
+<main class="container my-5">
 	<slot></slot>
 </main>
 

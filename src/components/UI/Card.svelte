@@ -4,8 +4,8 @@
 
 <style>
   .frame {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,21 +17,31 @@
     text-align: center;
   }
   img {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
     /* vertical-align: middle; */
+  }
+  .card-footer > div {
+    height: 3rem;
+    /* background */
   }
 </style>
 
-<figure class="my-3 mx-2 w-25 ">
-  <div class="frame ">
-    <img src={card.image || 'logo-512.png'} alt={card.name} />
+<div class="card">
+  <div class="frame bg-white-50 m-2 mx-auto" >
+    <!-- <div style="background-image: url({'images/tux/'+card.image || 'logo-512.png'}; background-size: cover; background-repeat: no-repeat;">
+
+    </div> -->
+    <img class="card-img-top" src={'images/tux/'+card.image || 'logo-512.png'} alt={card.name} />
   </div>
 
-  <figcaption class="mt-2 text-center">
-    <p>
-      <!-- {card.name}
-    <br> -->
-    {card.desc}</p>
-  </figcaption>
-</figure>
+  <div class="card-footer">
+    <div>
+      <p>
+        <!-- {card.name}
+          <br> -->
+          {card.desc}</p>
+          
+        </div>
+  </div>
+</div>
