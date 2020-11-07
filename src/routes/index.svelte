@@ -3,8 +3,8 @@
 </script>
 
 <style>
-  h1,
-  figure {
+  /* figure, */
+  h1 {
     text-align: center;
     margin: 0 auto;
   }

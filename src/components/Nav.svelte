@@ -4,6 +4,7 @@
   const links = [
     { url: "advices", label: "conseils" },
     { url: "distros", label: "distributions" },
+    { url: "environments", label: "Environnements" },
     { url: "thumbnails", label: "vignettes" },
   ];
 </script>

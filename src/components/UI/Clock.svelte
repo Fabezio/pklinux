@@ -3,6 +3,10 @@
 
   let date = new Date();
   const options = {
+    weekday: "short",
+    day: "numeric",
+    year: "numeric",
+    month: "numeric",
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",  };
