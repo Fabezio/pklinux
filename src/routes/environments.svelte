@@ -17,4 +17,6 @@
   <br>Leur variété resulte de besoins différents en fonction des taches à accomplir ou des habitudes. Pour exemple si voius venez de windows, vous serez plus à l'aise avec Cinnamon ou KDE. En revanche si votre OS précédent est Mac, il vous faudra plutot Budgie ou Deepin.
   Si vous êtes un inconditionnel de Android, C'est Gnome qui s'imposera.
 </p>
+<h2>Aperçus</h2>
+
 
