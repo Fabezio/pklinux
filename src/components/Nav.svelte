@@ -2,8 +2,8 @@
 	import Clock from './UI/Clock.svelte'
   export let segment;
   const links = [
-    { url: "advices", label: "conseils" },
     { url: "distros", label: "distributions" },
+    { url: "advices", label: "conseils" },
     { url: "environments", label: "Environnements" },
     { url: "thumbnails", label: "vignettes" },
   ];

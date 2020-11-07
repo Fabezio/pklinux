@@ -10,32 +10,32 @@
     },
     {
       name: "ami",
-      desc: "linux est ton ami",
+      desc: "Linux est ton ami",
       image: "friend-tux.jpeg",
     },
     {
       name: "puissant",
-      desc: "linux est plus puissant qu'il en a l'air",
+      desc: "Linux est plus puissant qu'il en a l'air",
       image: "vegeta tux.png",
     },
     {
       name: "adorable",
-      desc: "Si un OS pouvait adorable, ce serait Linux",
+      desc: "Si un OS pouvait être adorable, ce serait Linux",
       image: "female tux.png",
     },
     {
       name: "transparent",
-      desc: "linux n'a rien à cacher, tout est accessible",
+      desc: "Linux n'a rien à cacher, tout est accessible",
       image: "transparent tux.png",
     },
     {
       name: "vigilant",
-      desc: "linux a le souci de votre sécurité",
+      desc: "Linux a le souci de votre sécurité",
       image: "viking tux.png",
     },
     {
       name: "attention",
-      desc: "si linux dérape ça ne sera pas sa faute",
+      desc: "Si ça dérape, ça ne sera pas la faute de Linux",
       image: "vader tux.png",
     },
   ];

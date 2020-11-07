@@ -51,7 +51,7 @@
     actuelle le système d'exploitation majeur, celui qui est incontournable.
     Pourquoi? parce que tout le monde connait. vous rencontrerez rarement
     quelqu'un qui n'en a jamais entendu parler. En bref,
-    <b>presque tout le monde a un ordinateur fonctionnnant sous Windows</b>,
+    <b>presque tout le monde a un ordinateur fonctionnant sous Windows</b>,
     renforçant l'idée préconçue que c'est
     <b>le </b>système de référence. Et pourtant...
   </p>
@@ -64,10 +64,10 @@
     Il y a mieux. Je ne citerai pas MacOS
     <em>(trop tard!) </em>, le système d'Apple, bien plus stable, au matériel
     robuste (n'allez pas le claquer contre un mur, il y a des limites), mais
-    dont la plupart des outils sont payants. Quant au dépot, tout comme son
+    dont la plupart des outils sont payants. Quant au dépôt, tout comme son
     rival, il n'est pas intégré par défaut et son usage est
     <q>limité aux utilisateurs avertis</q>. Alors, qu'est-ce que ces deux
-    systèmes d'expmloiation ont en commun? D'abord il sont répandus, leur usage
+    systèmes d'exploitation ont en commun? D'abord il sont répandus, leur usage
     est plutôt simple (un petit didacticiel est disponible au premier démarrage
     pour les débutants). Et ils sont payants. MacOS est d'au moins le double de
     Windows version familiale. En outre, si vous ne savez pas où chercher, vous
