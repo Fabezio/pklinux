@@ -9,8 +9,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: opacity(0.70);
+    filter: opacity(0.75);
     /* vertical-align: middle; */
+    
+  }
+  .frame:hover {
+    filter: opacity(0.95);
+    
     
   }
   figure {
