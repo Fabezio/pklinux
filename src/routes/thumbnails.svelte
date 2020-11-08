@@ -31,12 +31,22 @@
     {
       name: "vigilant",
       desc: "Linux a le souci de votre sécurité",
-      image: "viking tux.png",
+      image: "matrix.png",
     },
     {
       name: "attention",
       desc: "Si ça dérape, ça ne sera pas la faute de Linux",
       image: "vader tux.png",
+    },
+    {
+      name: "flexibilité",
+      desc: "Linux est aussi robuste que flexible",
+      image: "luffy.png",
+    },
+    {
+      name: "partenaire",
+      desc: "GNU est partenaire de Linux",
+      image: "gnu.png",
     },
   ];
 </script>

@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: opacity(0.70);
     /* vertical-align: middle; */
     
   }
@@ -28,7 +29,7 @@
 </style>
 
 <div class="card rounded shadow">
-  <div class="frame bg-white-50 m-2 mx-auto" >
+  <div class="frame m-2 mx-auto" >
     <!-- <div style="background-image: url({'images/tux/'+card.image || 'logo-512.png'}; background-size: cover; background-repeat: no-repeat;">
 
     </div> -->
