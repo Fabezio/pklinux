@@ -1,6 +1,7 @@
 <script>
-	import Clock from './UI/Clock.svelte'
+  import Clock from "./UI/Clock.svelte";
   export let segment;
+  export let theme;
   const links = [
     { url: "distros", label: "distributions" },
     { url: "advices", label: "conseils" },
@@ -43,9 +44,9 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: rgb(255, 62, 0);
+    background-color: rgb(127, 255, 255);
     display: block;
-    bottom: -1px;
+    bottom: -7px;
   }
 
   a {
@@ -55,7 +56,8 @@
   }
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<nav
+  class="navbar navbar-expand-lg navbar-{theme.color == 'light' ? 'dark' : 'light'} bg-{theme.bg} sticky-top">
   <a class="navbar-brand" href=".">PKLINUX</a>
   <button
     class="navbar-toggler"
@@ -77,66 +79,17 @@
           href=".">accueil</a>
       </li>
       {#each links as link}
-        <li class="nav-item">
+        <li class="nav-item {segment == link.url ? 'active' : ''}">
           <a
             class="nav-link text-uppercase"
             aria-current={segment === link.url ? 'page' : undefined}
             href={link.url}>{link.label}</a>
         </li>
-        <!-- <li><a aria-current="{segment === 'distros' ? 'page' : undefined}" href="distros">distributions</a></li>
-		  <li><a aria-current="{segment === 'thumbnails' ? 'page' : undefined}" href="thumbnails">vignettes</a></li> -->
       {/each}
-      <!-- <ul> -->
-
-      <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-				   the blog data when we hover over the link or tap it on a touchscreen -->
-      <!-- <li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li> -->
-      <!-- </ul> -->
-      <!-- <li class="nav-item active">
-        <a class="nav-link" href="#">Home
-          <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider" />
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link disabled"
-          href="#"
-          tabindex="-1"
-          aria-disabled="true">Disabled</a>
-      </li> -->
-	</ul>
-	<div>
-		<Clock />
-		<!-- horloge ici -->
-	</div>
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input
-        class="form-control mr-sm-2"
-        type="search"
-        placeholder="Search"
-        aria-label="Search" />
-      <button
-        class="btn btn-outline-success my-2 my-sm-0"
-        type="submit">Search</button>
-    </form> -->
+    </ul>
+    <div>
+      <Clock />
+    </div>
   </div>
 </nav>
 <nav />

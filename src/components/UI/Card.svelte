@@ -10,44 +10,31 @@
     align-items: center;
     justify-content: center;
     filter: opacity(0.75);
-    /* vertical-align: middle; */
-    
   }
   .frame:hover {
     filter: opacity(0.95);
-    
-    
   }
-  figure {
-    /* display: block; */
-    text-align: center;
-  }
+
   img {
     max-width: 300px;
     max-height: 300px;
-    /* vertical-align: middle; */
   }
   .card-footer > div {
     height: 3rem;
-    /* background */
   }
 </style>
 
-<div class="card rounded shadow">
-  <div class="frame m-2 mx-auto" >
-    <!-- <div style="background-image: url({'images/tux/'+card.image || 'logo-512.png'}; background-size: cover; background-repeat: no-repeat;">
-
-    </div> -->
-    <img class="card-top-img" src={'images/tux/'+card.image || 'logo-512.png'} alt={card.name} />
+<div class="card rounded ">
+  <div class="frame m-2 mx-auto">
+    <img
+      class="card-top-img"
+      src={'images/tux/' + card.image || 'logo-512.png'}
+      alt={card.name} />
   </div>
 
   <div class="card-footer">
     <div>
-      <p>
-        <!-- {card.name}
-          <br> -->
-          {card.desc}</p>
-          
-        </div>
+      <p>{card.desc}</p>
+    </div>
   </div>
 </div>
