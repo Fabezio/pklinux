@@ -5,9 +5,11 @@
   const links = [
     { url: "distros", label: "distributions" },
     { url: "advices", label: "conseils" },
-    { url: "environments", label: "Environnements" },
+    // { url: "environments", label: "Environnements" },
+    { url: "terminal", label: "terminal" },
     { url: "thumbnails", label: "vignettes" },
   ];
+  let open = false;
 </script>
 
 <style>
@@ -60,6 +62,9 @@
   class="navbar navbar-expand-lg navbar-{theme.color == 'light' ? 'dark' : 'light'} bg-{theme.bg} sticky-top">
   <a class="navbar-brand" href=".">PKLINUX</a>
   <button
+    on:click={() => {
+      open = !open;
+    }}
     class="navbar-toggler"
     type="button"
     data-toggle="collapse"
@@ -70,8 +75,10 @@
     <span class="navbar-toggler-icon" />
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <div
+    class="collapse navbar-collapse {open ? 'show' : ''}"
+    id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
       <li class="nav-item">
         <a
           class="nav-link text-uppercase"
@@ -87,7 +94,7 @@
         </li>
       {/each}
     </ul>
-    <div>
+    <div class="text-{theme.color} collapse {open ? '' : 'show'}">
       <Clock />
     </div>
   </div>
