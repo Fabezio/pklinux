@@ -1,7 +1,7 @@
 <script>
   import Prompt from "../components/Prompt.svelte";
+  import Code from "../components/Code.svelte";
 </script>
-
 
 <style>
   code {
@@ -12,10 +12,10 @@
     margin: 8px;
   }
   .item {
-      width: 25rem !important;
+    width: 25rem !important;
   }
   i {
-      font-weight: 600;
+    font-weight: 600;
   }
 </style>
 
@@ -71,11 +71,11 @@
 </p>
 <h3>La ligne utilisateur</h3>
 <p>
-  Dès l'ouverture du terminal une ligne est apparue, c'est l'invitede commande
+  Dès l'ouverture du terminal une ligne est apparue, c'est l'invite de commande
   (prompt), comme suit:
 </p>
 
-<code><Prompt />$</code>
+<code><Prompt /></code>
 <p>ceci est mon propre prompt</p>
 
 <ol>
@@ -111,95 +111,117 @@
   cette commande désigne le chemin complet dans lequel vous vous trouvez. Entrez
   donc cette instruction et admirez le résultat
 </p>
-<code>
-    <span class="text-success ">fabezio@code4U</span> ~$ pwd
-    <br>/home/fabezio
-    <br><span class="text-success ">fabezio@code4U</span> ~$ 
-</code>
-<p>Sympa, non? Et comme vous avez pu le remarquer, le prompt réapparait automatiquement. Bien, il est temps d'explorer plus avant les commandes de navigation.</p>
+<Code instruction="pwd">
+  /home/fabezio
+  
+</Code>
+<p>
+  Sympa, non? Et comme vous avez pu le remarquer, le prompt réapparait
+  automatiquement. Bien, il est temps d'explorer plus avant les commandes de
+  navigation.
+</p>
 <h3>ls <small>(list)</small></h3>
-<p>a présent vous allez afficher les fichiers présents dans le répertoire courant via <i>ls</i>:</p>
-<code>
-    <Prompt/>$ ls
-    <br ><span class=" inline-block text-primary ">
-        <!-- <ul class="inline-block ">  -->
-            <span class="item">Bureau</span>
-            <span class="item">Document</span>
-            <span class="item">Musique</span>
-            <span class="item">Vidéo</span>
-            <span class="item">Téléchargemnts</span>
-        <!-- </ul> -->
-    </span>
-    <br><Prompt />$ 
+<p>
+  a présent vous allez afficher les fichiers présents dans le répertoire courant
+  via
+  <i>ls</i>:
+</p>
+<Code instruction="ls">
+  <span class=" inline-block text-primary ">
+    <!-- <ul class="inline-block ">  -->
+    <span class="item">Bureau</span>
+    <span class="item">Document</span>
+    <span class="item">Musique</span>
+    <span class="item">Vidéo</span>
+    <span class="item">Téléchargemnts</span>
+    <!-- </ul> -->
+  </span>
+</Code>
+<h3>cd <small>(change directory - changement de répertoire)</small></h3>
+<p>
+  Le déplacement dans une arborescence est des plus simples, il suffit d'entrer
+  la commande
+  <i>cd</i>
+  suivie du répertoire dans lequel vous voullez vous rendre<br />
+  <Code instruction="cd Bureau" >
+    <!-- <br><span class="text-success ">fabezio@code4U</span> Bureau/ $  -->
     
-    </code>
-    <h3>cd <small>(change directory - changement de répertoire)</small></h3>
-    <p>Le déplacement dans une arborescence est des plus simples, il suffit d'entrer la commande <i>cd</i> suivie du répertoire dans lequel vous voullez vous rendre<br>
-        <code>
-            <Prompt />$ cd Bureau
-            
-            <!-- <br><span class="text-success ">fabezio@code4U</span> Bureau/ $  -->
-            <br><Prompt path="Bureau" />$ 
-            
-            </code>
-            <b>NB</b>: quelle que soit la commmande, vous devrez <u><b>toujours</b></u> la faire suivre d'un espace, sans quoi le terminal vous renverra un message d'erreur:
-            <code>
-                <Prompt />$ cdBureau
-                <br>bash: commande cdBureau non reconnue
-                <br>
-                <Prompt />$ 
-                
-                </code>
-                
-            </p>
-            <h3>afficher les fichiers cachés: ls -a</h3>
-            <p>Entrez donc la commande donnée ci-dessus et voyez ce que ça donne</p>
-                            <code>
-                                <Prompt path="Bureau"/>$ ls -a
-                                <br ><span class=" inline-block text-primary ">
-                                    <!-- <ul class="inline-block ">  -->
-                                        <span class="item">.</span>
-                                        <span class="item">..</span>
-                                        <!-- <span class="item">Musique</span>
+  </Code>
+  <b>NB</b>: quelle que soit la commmande, vous devrez
+  <u><b>toujours</b></u>
+  la faire suivre d'un espace, sans quoi le terminal vous renverra un message
+  d'erreur:
+  <Code instruction="cdBureau">
+    <!-- <Prompt />$ cdBureau -->
+    
+    bash: commande cdBureau non reconnue
+    <!-- <Prompt />$ -->
+  </Code>
+</p>
+<h3>afficher les fichiers cachés: ls -a</h3>
+<p>Entrez donc la commande donnée ci-dessus et voyez ce que ça donne</p>
+<Code path="Bureau" path2="Bureau" instruction="ls -a"> 
+  <!-- <Prompt />$ ls -a -->
+  <!-- <br /> -->
+  <span class=" inline-block text-primary ">
+    <!-- <ul class="inline-block ">  -->
+    <span class="item">.</span>
+    <span class="item">..</span>
+    <!-- <span class="item">Musique</span>
                                         <span class="item">Vidéo</span>
                                         <span class="item">Téléchargemnts</span> -->
-                                    <!-- </ul> -->
-                                </span>
-                                <br><Prompt path="Bureau" />$ 
-                                
-                                </code>
-                                <p>et entez maintenant <i>ls ..</i>
-                                    <br>Vous voilà revenu.e dans votre répertoire. <br><q>euhh... pourquoi ça?
-                                        
-                                    </q>
-                                    <br>eh bien: avant d'avoir la réponse , je vous invite à rentrer la même commande. <b>STOP!</b>
-                                    appuyez donc sur la flèche du haut: la dernière commande entrée apparait. 
-                                                    <code>
-                                                        <Prompt />$ ls -a
-                                                        
-                                                        
-                                                        </code>
-                        </p>appuyez maintenant sur <i>[ENTREE]</i>
-                        <code>
-                        <Prompt/>$ ls -a
-    <br ><span class=" inline-block text-primary ">
-        <!-- <ul class="inline-block ">  -->
-            <span class="item">.</span>
-            <span class="item">..</span>
-            <span class="item">Bureau</span>
-            <span class="item">Document</span>
-            <span class="item">Musique</span>
-            <span class="item">Vidéo</span>
-            <span class="item">Téléchargemnts</span>
-        <!-- </ul> -->
-    </span>
-    <br><Prompt />$ 
-    </code>
-    <p>Eh oui, les deux particularités ont réapparu! Alors de quoi s'agit-il et à quoi servent ces extensions. Celle que vous avez utilisée précedemment est un <q>raccourci</q> pour aller au répertoire dit parent, à savoir celui qui précede le courant. Quant au point unique, il désigne le répertoire courant. Nous verrons plus tard ce que j'entends par raccourci et pourquoi ceux-là ont été créés.</p>
-
-
-
+    <!-- </ul> -->
+  </span>
+  <!-- <br /> -->
+  <!-- <Prompt path="Bureau" />$ -->
+</Code>
+<p>
+  et entez maintenant
+  <i>ls ..</i>
+  <br />Vous voilà revenu.e dans votre répertoire.
+  <br /><q>euhh... pourquoi ça?
+  </q>
+  <br />eh bien: avant d'avoir la réponse , je vous invite à rentrer la même
+  commande.
+  <b>STOP!</b>
+  appuyez donc sur la flèche du haut: la dernière commande entrée apparait.
+  <code>
+    <Prompt instruction="ls -a"/>
+  </code>
+</p>appuyez maintenant sur
+<i>[ENTREE]</i>
+<Code instruction="ls -a">
+  <span class=" inline-block text-primary ">
+    <!-- <ul class="inline-block ">  -->
+    <span class="item">.</span>
+    <span class="item">..</span>
+    <span class="item">Bureau</span>
+    <span class="item">Document</span>
+    <span class="item">Musique</span>
+    <span class="item">Vidéo</span>
+    <span class="item">Téléchargemnts</span>
+    <!-- </ul> -->
+  </span>
+  
+</Code>
+<p>
+  Eh oui, les deux particularités ont réapparu! Alors de quoi s'agit-il et à
+  quoi servent ces extensions. Celle que vous avez utilisée précedemment est un
+  <q>raccourci</q>
+  pour aller au répertoire dit parent, à savoir celui qui précede le courant.
+  <br>
+  Quant au point unique, il désigne le répertoire courant.
+  vous pouvez le constater en tapant <q>cd .</q>
+  <code>
+    
+    <Prompt instruction="cd ." />
+    <br>
+    <Prompt />
+  </code>
+   Voyons maintenant ce que sont ces deux fichiers pointés.
+</p>
+<h3>Les chemins</h3> 
+Le système de fichier est conçu comme une arborescence dans laquelle tout est fichier, dès lors qu'il apparait dans le terminal: fichier simple, dossier, partition, volume ou lecteur. Les dossiers suivent une hiérarchie arborescente, et peuvent contenir tout ce qui vient d'être cité, regroupé en différentes catégories suivant les usages. Notez que je parle d'arborescence, aussi le début de ladite arborescence est appelé racine et répond au symbole <q>/</q>. En descendant dans la hiérarchie, on sépare les noms des dossiers avec ce même symbole, appelé <q>barre oblique</q> ou, plus prosaïquement, <q>slash</q> (sous windows, ce même séparateur est une barre oblique inversée - <q>antislash</q> et il n'y a pas de racine, on utilise la lettre du lecteur, par défaut c pour le lecteur système suivie de deux points puis <q>\</q>, soit "c:\").
 
 <h2>Commandes Administrateur (su / sudo)</h2>
 <h3>Gestion des paquets</h3>
-

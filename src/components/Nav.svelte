@@ -79,14 +79,22 @@
     class="collapse navbar-collapse {open ? 'show' : ''}"
     id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto text-center">
-      <li class="nav-item">
+      <li
+        on:click={() => {
+          open = false;
+        }}
+        class="nav-item">
         <a
           class="nav-link text-uppercase"
           aria-current={segment === undefined ? 'page' : undefined}
           href=".">accueil</a>
       </li>
       {#each links as link}
-        <li class="nav-item {segment == link.url ? 'active' : ''}">
+        <li
+          on:click={() => {
+            open = false;
+          }}
+          class="nav-item {segment == link.url ? 'active' : ''}">
           <a
             class="nav-link text-uppercase"
             aria-current={segment === link.url ? 'page' : undefined}
