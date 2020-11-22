@@ -18,6 +18,9 @@ import Clock from "../components/UI/Clock.svelte";
   i {
     font-weight: 600;
   }
+  td {
+    padding-right: 1rem;
+  }
 </style>
 
 <svelte:head>
@@ -127,10 +130,10 @@ import Clock from "../components/UI/Clock.svelte";
 <Code instruction="ls">
   <span class=" inline-block text-primary ">
     <span class="item">Bureau</span>
-    <span class="item">Document</span>
+    <span class="item">Documents</span>
     <span class="item">Musique</span>
-    <span class="item">Vidéo</span>
-    <span class="item">Téléchargemnts</span>
+    <span class="item">Vidéos</span>
+    <span class="item">Téléchargements</span>
   </span>
 </Code>
 <h3>cd <small>(change directory - changement de répertoire)</small></h3>
@@ -177,10 +180,10 @@ import Clock from "../components/UI/Clock.svelte";
       <span class="item">..</span>
       <span class="item">Bureau</span>
       <span class="item text-light">.bashrc</span>
-      <span class="item">Document</span>
+      <span class="item">Documents</span>
       <span class="item">Musique</span>
-      <span class="item">Vidéo</span>
-      <span class="item">Téléchargemnts</span>
+      <span class="item">Vidéos</span>
+      <span class="item">Téléchargements</span>
     </span>
   </Code>
 </p>
@@ -252,10 +255,10 @@ comme vous pouvez le voir, une erreur d'entrée est très bien gérée. Autre ch
       <span class="item">..</span> -->
       <span class="item">Bureau</span>
       <!-- <span class="item text-light">.bashrc</span> -->
-      <span class="item">Document</span>
+      <span class="item">Documents</span>
       <span class="item">Musique</span>
-      <span class="item">Vidéo</span>
-      <span class="item">Téléchargemnts</span>
+      <span class="item">Vidéos</span>
+      <span class="item">Téléchargements</span>
     </span>
   </Code>
   Maintenant un <i>ls -a</i>
@@ -267,8 +270,8 @@ comme vous pouvez le voir, une erreur d'entrée est très bien gérée. Autre ch
       <span class="item text-light">.bashrc</span>
       <span class="item">Document</span>
       <span class="item">Musique</span>
-      <span class="item">Vidéo</span>
-      <span class="item">Téléchargemnts</span>
+      <span class="item">Vidéos</span>
+      <span class="item">Téléchargements</span>
     </span>
   </Code>
   En plus des fichiers '.' et '..', vous pouvez voir '.bashrc' en clair. Le point en début de fichier désigne un fichier caché. En général, il s'agit de fichiers de configuration, il en va de même pour des dossiers (vous en verrez apparaitre de plus en plus au fur et à mesure des installations). Bref, tout ce qui est pointé au début n'apparaitra pas en appelant une liste classique.
@@ -276,19 +279,45 @@ comme vous pouvez le voir, une erreur d'entrée est très bien gérée. Autre ch
 <h3>les listes détaillées</h3>
 <p>Il est également possible d'appeler de telles listes, avec l'option "-l"</p>
 <Code instruction="ls -l">
+  total 35
   <table>
     <tr>
-      <td class="pr-3">drwxr-xr-x</td>
-      <td class="pr-3">fabezio</td>
-      <td class="pr-3">fabezio</td>
-      <td class="pr-3 text-primary">jour</td>
-      <td class="pr-3 text-primary">mois</td>
-      <td class="pr-3 text-primary">hh:mm</td>
-      <td class="pr-3 text-primary">Documents</td>
-      <!-- <div class="col-md-2 text-primary">4</div> -->
-
+      <td class="">drwxr-xr-x</td>
+      <td class="">3</td>
+      <td class="">fabezio</td>
+      <td class="">fabezio</td>
+      <td class="">4096</td>
+      <td class="">nov.</td>
+      <td class="">9</td>
+      <td class="">22:19</td>
+      <td class=" text-primary">Bureau</td>
+      
     </tr>
+    <tr>
+      <td class="">drwxr-xr-x</td>
+      <td class="">4</td>
+      <td class="">fabezio</td>
+      <td class="">fabezio</td>
+      <td class="">4096</td>
+      <td class=" ">nov.</td>
+      <td class=" ">15</td>
+      <td class=" ">13:38</td>
+      <td class=" text-primary">Documents</td>
+      
+    </tr>
+    <tr><td>drwxr-xr-x</td>  <td>3</td> <td>fabezio</td> <td>fabezio</td> <td>4096</td>  <td>nov.</td>  <td>10</td> <td>09:32</td>  <td class="text-primary">Images</td></tr>
+    <tr><td>drwxr-xr-x</td>  <td>4</td> <td>fabezio</td> <td>fabezio</td> <td>4096</td>  <td>oct.</td>  <td>30</td> <td>10:41</td>  <td class="text-primary">Musique</td></tr>
+    <tr><td>drwxr-xr-x</td>  <td>2</td> <td>fabezio</td> <td>fabezio</td> <td>4096</td>  <td>oct.</td>   <td>6</td> <td>16:47</td>  <td class="text-primary">Public</td></tr>
+    <tr><td>drwxr-xr-x</td>  <td>3</td> <td>fabezio</td> <td>fabezio</td> <td>4096</td>  <td>oct.</td>  <td>22</td> <td>10:00</td>  <td class="text-primary">snap</td></tr>
+    <tr><td>drwxr-xr-x</td> <td>14</td> <td>fabezio</td> <td>fabezio</td> <td>4096</td>  <td>nov.</td>  <td>19</td> <td>13:31</td>  <td class="text-primary">Téléchargements</td></tr>
+    <tr><td>drwxr-xr-x</td>  <td>2</td> <td>fabezio</td> <td>fabezio</td> <td>4096</td>  <td>nov.</td>   <td>9</td> <td>22:33</td>  <td class="text-primary">Vidéos</td></tr>
   </table>
+  <!-- drwxr-xr-x  3 fabezio fabezio  4096 nov.   9 22:19  Bureau
+drwxr-xr-x  5 fabezio fabezio  4096 nov.   9 19:49  Codes
+drwxr-xr-x  4 fabezio fabezio  4096 nov.  15 13:38  Documents -->
+
+
+
   <div class="row">
   </div>
 </Code>
@@ -300,3 +329,4 @@ comme vous pouvez le voir, une erreur d'entrée est très bien gérée. Autre ch
 
 <h2>Commandes Administrateur (su / sudo)</h2>
 <h3>Gestion des paquets</h3>
+
