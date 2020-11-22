@@ -14,11 +14,16 @@
     padding: 8px;
     margin: 8px;
   }
+    slot {
+        /* display: block; */
+    }
 </style>
 
 <code>
     <Prompt {path} {u} {instruction} />
     
-  <br>
+  <!-- <br> -->
+  <slot/>
+  <!-- <br> -->
   <Prompt path={path2} u={u2} />
 </code>

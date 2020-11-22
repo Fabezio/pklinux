@@ -4,6 +4,9 @@
   export let instruction = "";
 </script>
 
-<span class="text-success ">fabezio@code4U</span>:<span
-  class="text-primary">{path}</span>{u}
-{instruction}
+<div>
+
+    <span class="text-success ">fabezio@code4U</span>:<span
+    class="text-primary">{path}</span>{u}
+    {instruction}
+</div>
