@@ -1,5 +1,6 @@
 <script>
   import Prompt from "./Prompt.svelte";
+  import PromptInput from "./PromptInput.svelte"
   export let path = "~";
   export let path2 = "~";
   export let u = "$";
@@ -14,13 +15,11 @@
     padding: 8px;
     margin: 8px;
   }
-    slot {
-        /* display: block; */
-    }
+    
 </style>
 
 <code>
-    <Prompt {path} {u} {instruction} />
+    <PromptInput {path} {u} {instruction} />
     
   <!-- <br> -->
   <slot/>
