@@ -3,6 +3,7 @@
     // import PromptInput from "../../components/PromptInput.svelte";
     import Code from "../../../components/Code.svelte";
     import Alert from "../../../components/UI/Alert.svelte";
+    import Head from "../../../components/UI/Head.svelte";
   
     import { files } from "../files.js";
     // files = files.sort()
@@ -19,6 +20,7 @@
     }
     let instruction;
     // import Clock from "../components/UI/Clock.svelte";
+    export let title
   </script>
   
   <style>
@@ -41,7 +43,5 @@
     }
   </style>
   
-  <svelte:head>
-    <title>Terminal | Lister ses fichers</title>
-  </svelte:head>
-  <h1>Terminal : Mode d’emploi</h1>
+  <Head {title} page="Lister des fichers" />
+  

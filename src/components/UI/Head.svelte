@@ -4,6 +4,6 @@
 </script>
 
 <svelte:head>
-<title>{title} / {page}</title>
+<title>{title} | {page}</title>
 </svelte:head>
 <h1  class="text-uppercase">{title}: {page}</h1>

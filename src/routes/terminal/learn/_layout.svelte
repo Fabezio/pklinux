@@ -3,7 +3,8 @@
   const theme = {
     bg: "info",
     color: "light",
-  };
+  }; 
+  const title = "Terminal"
 
 </script>
 
@@ -13,7 +14,7 @@
 
 
 <main class="container my-5">
-  <slot />
+  <slot {title} />
 </main>
 
 

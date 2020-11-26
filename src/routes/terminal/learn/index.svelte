@@ -20,6 +20,7 @@
   }
   let instruction;
   // import Clock from "../components/UI/Clock.svelte";
+  export let title
 </script>
 
 <style>
@@ -41,7 +42,7 @@
     padding-right: 1rem;
   }
 </style>
-<Head title="terminal" page="mode d’emploi" />
+<Head {title} page="Mode d’emploi" />
 <section id="learn">
   <h2>Commandes de base</h2>
   <h3>première commande</h3>
@@ -114,7 +115,7 @@
     </Alert>
     <p>eh bien: avant d'avoir la réponse, je vous invite à rentrer la même
     commande.
-    <div class="alert alert-danger rounded-pill mx-2"><i class="far fa-warning-circle mr-2"></i>
+    <div class="alert alert-danger rounded-pill mx-2"><i class="far fa-exclamation-circle mr-2"></i>
       <b>STOP!</b>
     </div>
     <p>Appuyez donc sur la flèche du haut: la dernière commande entrée apparait;
