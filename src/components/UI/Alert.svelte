@@ -1,0 +1,1 @@
+<div class="alert alert-warning rounded-pill mx-2"><i class="far fa-question-circle mr-2"></i><slot /></div>

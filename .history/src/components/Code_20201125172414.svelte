@@ -19,7 +19,7 @@
 </style>
 
 <code>
-    <Prompt {path} {u} {instruction} />
+    <PromptInput {path} {u} {instruction} />
     
   <!-- <br> -->
   <slot/>

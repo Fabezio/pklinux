@@ -27,11 +27,15 @@
     margin: 8px;
   }
 
-  
+  .item {
+    width: 25rem !important;
+  }
   i {
     font-weight: 600;
   }
-  
+  td {
+    padding-right: 1rem;
+  }
 </style>
 
 <svelte:head>
@@ -111,7 +115,7 @@
         sous lequel vous êtes connecté. L'autre indique la machine actuelle.
       </li>
       <li>
-        Le second terme désigne le chemin (<i>~</i>
+        Le second terme designe le chemin (<i>~</i>
         est le raccourci pour
         <i>/home/</i>
         suivi de votre identifiant) puis le type d'utilisateur(standard ou
