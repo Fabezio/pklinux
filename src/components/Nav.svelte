@@ -60,7 +60,19 @@
 
 <nav
   class="navbar navbar-expand-lg navbar-{theme.color == 'light' ? 'dark' : 'light'} bg-{theme.bg} sticky-top">
-  <a class="navbar-brand" href=".">PKLINUX</a>
+  <a class="navbar-brand" href=".">
+    <!-- <span class="rounded-lg rounded-pill bg-light m-0 p-0">
+    </span> -->
+    <span class="fa-stack fa-2x mr-1">
+      <i class="  fas fa-circle fa-stack-2x">
+      </i>
+      <i class="  fab fa-linux fa-stack-1x text-dark  fa-inverse">
+      </i>
+
+    </span>
+
+
+    PKLINUX</a>
   <button
     on:click={() => {
       open = !open;
